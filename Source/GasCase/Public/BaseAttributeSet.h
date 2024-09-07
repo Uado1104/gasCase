@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
 #include "AbilitySystemComponent.h"
+#include "GameplayEffectExtension.h"
 #include "BaseAttributeSet.generated.h"
 
 /**
@@ -47,4 +48,5 @@ public:
 	FGameplayAttributeData MaxStrength;
 	ATTRIBUTE_ACCESSORS(UBaseAttributeSet, MaxStrength);
 
+	void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 };
